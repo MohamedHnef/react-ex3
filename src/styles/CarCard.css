@@ -1,0 +1,79 @@
+/* Car Card */
+.car-card {
+    background-color: #fff;
+    border: 1px solid rgba(195, 212, 233, 0.4);
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .card-header h3 {
+    font-size: 1rem;
+    color: #1d1d1d;
+  }
+  
+  .card-header p {
+    font-size: 0.9rem;
+    color: #596780;
+  }
+  
+  .favorite-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .car-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .card-details {
+    font-size: 0.9rem;
+    color: #596780;
+  }
+  
+  .card-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-footer p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1d1d1d;
+  }
+  
+  .rent-button {
+    background-color: #3a7afe;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .rent-button:hover {
+    background-color: #2a5edb;
+  }
+  

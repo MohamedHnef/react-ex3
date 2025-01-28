@@ -1,26 +1,141 @@
 // src/components/Layout.jsx
 import React from 'react';
-import '../Layout.css'; // Add styles for layout structure
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Heart, Search } from 'lucide-react';
+import '../styles/Layout.css';
 
 function Layout({ children }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isFavoritesPage = location.pathname === '/favorites';
+
+  const handleHeartClick = () => {
+    if (isFavoritesPage) {
+      navigate('/');
+    } else {
+      navigate('/favorites');
+    }
+  };
+
   return (
     <div className="layout">
       <header className="top-bar">
-        <div className="logo">ShenCar</div>
-        <input
-          type="text"
-          placeholder="Search for cars..."
-          className="search-bar"
-        />
+        <div className="logo">ShenCarCar</div>
+        <div className="search-container">
+          <div className="search-bar-wrapper">
+            <input
+              type="text"
+              placeholder="Search by car name"
+              className="search-bar"
+            />
+            <button className="search-icon">
+              <Search size={20} color="#596780" />
+            </button>
+          </div>
+        </div>
+        <button
+          className="favorites-icon"
+          onClick={handleHeartClick}
+          aria-label="Favorites"
+        >
+          <Heart
+            size={24}
+            color={isFavoritesPage ? 'red' : '#596780'}
+            fill={isFavoritesPage ? 'red' : 'none'}
+          />
+        </button>
       </header>
       <div className="main-section">
         <aside className="left-sidebar">
-          {/* Filtering options go here */}
-          <div className="filters">Filters</div>
+          <div className="filter-section">
+            <h4>Type</h4>
+            <div className="filter-options">
+              <label>
+                <input type="checkbox" /> Sport (10)
+              </label>
+              <label>
+                <input type="checkbox" /> SUV (12)
+              </label>
+              <label>
+                <input type="checkbox" /> MPV (16)
+              </label>
+              <label>
+                <input type="checkbox" /> Sedan (20)
+              </label>
+              <label>
+                <input type="checkbox" /> Coupe (14)
+              </label>
+              <label>
+                <input type="checkbox" /> Hatchback (14)
+              </label>
+            </div>
+          </div>
+          <div className="filter-section">
+            <h4>Capacity</h4>
+            <div className="filter-options">
+              <label>
+                <input type="checkbox" /> 2 Person (10)
+              </label>
+              <label>
+                <input type="checkbox" /> 4 Person (14)
+              </label>
+              <label>
+                <input type="checkbox" /> 6 Person (12)
+              </label>
+            </div>
+          </div>
+          <div className="filter-section">
+            <h4>Price (Per Day)</h4>
+            <div className="price-slider">
+              <input type="range" min="0" max="100" />
+              <p>Max. $100.00</p>
+            </div>
+          </div>
         </aside>
         <main className="content">{children}</main>
       </div>
-      <footer className="footer">Footer content here</footer>
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-column logo-column">
+            <h2 className="footer-logo">ShenCarCar</h2>
+            <p>Our vision is to provide convenience and help increase your sales business.</p>
+          </div>
+          <div className="footer-column">
+            <h4>About</h4>
+            <ul>
+              <li>How it works</li>
+              <li>Featured</li>
+              <li>Partnership</li>
+              <li>Business Relation</li>
+            </ul>
+          </div>
+          <div className="footer-column">
+            <h4>Community</h4>
+            <ul>
+              <li>Events</li>
+              <li>Blog</li>
+              <li>Podcast</li>
+              <li>Invite a friend</li>
+            </ul>
+          </div>
+          <div className="footer-column">
+            <h4>Socials</h4>
+            <ul>
+              <li>Discord</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>Facebook</li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>©2025 ShenCarCar. All rights reserved</p>
+          <div className="footer-links">
+            <a href="#">Privacy & Policy</a>
+            <a href="#">Terms & Condition</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
