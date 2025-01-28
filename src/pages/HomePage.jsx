@@ -1,18 +1,38 @@
 // src/pages/HomePage.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CarCard from '../components/CarCard';
-import carsData from '../data/carsData.json';
 import '../styles/HomePage.css';
 
-function HomePage({ favorites, toggleFavorite }) {
+function HomePage({ cars, favorites, toggleFavorite, filters }) {
+  const { selectedTypes, selectedCapacity, maxPrice } = filters;
+
+  const [filteredCars, setFilteredCars] = useState(cars);
+
+  useEffect(() => {
+    const filtered = cars.filter((car) => {
+      if (selectedTypes.length > 0 && !selectedTypes.includes(car.type)) {
+        return false;
+      }
+      if (selectedCapacity.length > 0 && !selectedCapacity.includes(car.capacity)) {
+        return false;
+      }
+      if (car.pricePerDay > maxPrice) {
+        return false;
+      }
+      return true;
+    });
+
+    setFilteredCars(filtered);
+  }, [cars, selectedTypes, selectedCapacity, maxPrice]); // Ensure dependencies are minimal and necessary
+
   return (
     <div className="home-container">
       <header className="catalog-header">
         <h1>Cars Catalogue</h1>
-        <p>{carsData.length} Cars</p>
+        <p>{filteredCars.length} Cars</p>
       </header>
       <div className="car-grid">
-        {carsData.map((car) => (
+        {filteredCars.map((car) => (
           <CarCard
             key={car.id}
             car={car}

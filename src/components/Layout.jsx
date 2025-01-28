@@ -2,9 +2,10 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Heart, Search } from 'lucide-react';
+import Filters from './Filters';
 import '../styles/Layout.css';
 
-function Layout({ children }) {
+function Layout({ children, filters, carsData }) {
   const navigate = useNavigate();
   const location = useLocation();
   const isFavoritesPage = location.pathname === '/favorites';
@@ -47,50 +48,7 @@ function Layout({ children }) {
       </header>
       <div className="main-section">
         <aside className="left-sidebar">
-          <div className="filter-section">
-            <h4>Type</h4>
-            <div className="filter-options">
-              <label>
-                <input type="checkbox" /> Sport (10)
-              </label>
-              <label>
-                <input type="checkbox" /> SUV (12)
-              </label>
-              <label>
-                <input type="checkbox" /> MPV (16)
-              </label>
-              <label>
-                <input type="checkbox" /> Sedan (20)
-              </label>
-              <label>
-                <input type="checkbox" /> Coupe (14)
-              </label>
-              <label>
-                <input type="checkbox" /> Hatchback (14)
-              </label>
-            </div>
-          </div>
-          <div className="filter-section">
-            <h4>Capacity</h4>
-            <div className="filter-options">
-              <label>
-                <input type="checkbox" /> 2 Person (10)
-              </label>
-              <label>
-                <input type="checkbox" /> 4 Person (14)
-              </label>
-              <label>
-                <input type="checkbox" /> 6 Person (12)
-              </label>
-            </div>
-          </div>
-          <div className="filter-section">
-            <h4>Price (Per Day)</h4>
-            <div className="price-slider">
-              <input type="range" min="0" max="100" />
-              <p>Max. $100.00</p>
-            </div>
-          </div>
+          <Filters {...filters} carsData={carsData} />
         </aside>
         <main className="content">{children}</main>
       </div>
