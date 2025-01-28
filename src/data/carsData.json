@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "name": "Koenigsegg",
+      "type": "Sport",
+      "pricePerDay": 99,
+      "images": ["car1a.jpg", "car1b.jpg"],
+      "description": "A fast and luxurious sports car."
+    },
+    {
+      "id": 2,
+      "name": "Nissan GT-R",
+      "type": "Sport",
+      "pricePerDay": 80,
+      "images": ["car2a.jpg", "car2b.jpg"],
+      "description": "Iconic Japanese sports car."
+    }
+  ]
+  
