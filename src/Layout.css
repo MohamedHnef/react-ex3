@@ -1,0 +1,55 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 40%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .main-section {
+    display: flex;
+    flex: 1; /* Take the remaining space after the top bar and footer */
+  }
+  
+  .left-sidebar {
+    width: 250px; /* Fixed width */
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+  }
+  
+  .content {
+    flex: 1; /* Take the remaining space */
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
