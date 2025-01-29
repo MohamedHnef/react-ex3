@@ -4,6 +4,7 @@
     "name": "Koenigsegg",
     "type": "Sport",
     "pricePerDay": 99,
+    "fuelCapacity": 90,
     "capacity": 2,
     "images": ["car1a.jpg", "car1b.jpg"],
     "description": "A fast and luxurious sports car."
@@ -13,6 +14,7 @@
     "name": "Nissan GT-R",
     "type": "Sport",
     "pricePerDay": 80,
+    "fuelCapacity": 80,
     "capacity": 2,
     "images": ["car2a.jpg", "car2b.jpg"],
     "description": "Iconic Japanese sports car."
@@ -22,6 +24,7 @@
     "name": "Toyota Prius",
     "type": "Hatchback",
     "pricePerDay": 50,
+    "fuelCapacity": 45,
     "capacity": 4,
     "images": ["car3a.jpg", "car3b.jpg"],
     "description": "Efficient and eco-friendly hybrid car."
@@ -31,6 +34,7 @@
     "name": "Honda Odyssey",
     "type": "MPV",
     "pricePerDay": 65,
+    "fuelCapacity": 75,
     "capacity": 6,
     "images": ["car4a.jpg", "car4b.jpg"],
     "description": "Spacious family minivan with modern amenities."
@@ -40,6 +44,7 @@
     "name": "Ford Mustang",
     "type": "Coupe",
     "pricePerDay": 75,
+    "fuelCapacity": 60,
     "capacity": 2,
     "images": ["car5a.jpg", "car5b.jpg"],
     "description": "American muscle car with a powerful engine."
@@ -49,6 +54,7 @@
     "name": "Tesla Model 3",
     "type": "Sedan",
     "pricePerDay": 85,
+    "fuelCapacity": 50,
     "capacity": 4,
     "images": ["car6a.jpg", "car6b.jpg"],
     "description": "Innovative electric sedan with autopilot features."
@@ -58,6 +64,7 @@
     "name": "Jeep Wrangler",
     "type": "SUV",
     "pricePerDay": 90,
+    "fuelCapacity": 85,
     "capacity": 4,
     "images": ["car7a.jpg", "car7b.jpg"],
     "description": "Rugged SUV for off-road adventures."
@@ -67,6 +74,7 @@
     "name": "Volkswagen Golf",
     "type": "Hatchback",
     "pricePerDay": 55,
+    "fuelCapacity": 50,
     "capacity": 4,
     "images": ["car8a.jpg", "car8b.jpg"],
     "description": "Compact car with great handling and performance."
@@ -76,6 +84,7 @@
     "name": "Mercedes-Benz E-Class",
     "type": "Sedan",
     "pricePerDay": 110,
+    "fuelCapacity": 70,
     "capacity": 4,
     "images": ["car9a.jpg", "car9b.jpg"],
     "description": "Luxury sedan with premium features and comfort."
@@ -85,6 +94,7 @@
     "name": "Chevrolet Suburban",
     "type": "SUV",
     "pricePerDay": 120,
+    "fuelCapacity": 100,
     "capacity": 6,
     "images": ["car10a.jpg", "car10b.jpg"],
     "description": "Full-size SUV with ample space and towing capability."
@@ -94,6 +104,7 @@
     "name": "Mazda MX-5",
     "type": "Coupe",
     "pricePerDay": 70,
+    "fuelCapacity": 50,
     "capacity": 2,
     "images": ["car11a.jpg", "car11b.jpg"],
     "description": "Lightweight roadster with a sporty feel."
@@ -103,6 +114,7 @@
     "name": "Hyundai Santa Fe",
     "type": "MPV",
     "pricePerDay": 68,
+    "fuelCapacity": 65,
     "capacity": 6,
     "images": ["car12a.jpg", "car12b.jpg"],
     "description": "Versatile SUV with modern safety features."

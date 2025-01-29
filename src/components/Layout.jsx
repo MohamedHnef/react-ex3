@@ -19,7 +19,7 @@ function Layout({ children, filters, carsData }) {
   };
 
   return (
-    <div className="layout">
+    <div className="layout-container">
       <header className="top-bar">
         <div className="logo">ShenCarCar</div>
         <div className="search-container">

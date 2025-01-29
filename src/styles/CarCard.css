@@ -1,79 +1,87 @@
-/* Car Card */
+/* src/styles/CarCard.css */
 .car-card {
-    background-color: #fff;
-    border: 1px solid rgba(195, 212, 233, 0.4);
-    border-radius: 16px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .card-header h3 {
-    font-size: 1rem;
-    color: #1d1d1d;
-  }
-  
-  .card-header p {
-    font-size: 0.9rem;
-    color: #596780;
-  }
-  
-  .favorite-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .car-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 16px;
-  }
-  
-  .card-details {
-    font-size: 0.9rem;
-    color: #596780;
-  }
-  
-  .card-detail {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-  
-  .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .card-footer p {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #1d1d1d;
-  }
-  
-  .rent-button {
-    background-color: #3a7afe;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-size: 0.9rem;
-    cursor: pointer;
-  }
-  
-  .rent-button:hover {
-    background-color: #2a5edb;
-  }
-  
+  width: 317px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A202C;
+}
+
+.favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.car-image {
+  width: 100%;
+  height: 132px;
+  object-fit: contain;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #596780;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 20px;
+  color: #1A202C;
+  margin: 0;
+}
+
+.price strong {
+  font-weight: 700;
+}
+
+.rent-button {
+  background: #3563E9;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.rent-button:hover {
+  background: #2A4EB2;
+}

@@ -7,7 +7,6 @@
   
   .catalog-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
   }
@@ -21,6 +20,8 @@
   .catalog-header p {
     font-size: 1rem;
     color: #596780;
+    margin-left: 15px;
+    padding-top: 5px;
   }
   
   .car-grid {
