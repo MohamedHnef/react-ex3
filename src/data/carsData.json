@@ -4,119 +4,119 @@
     "name": "Koenigsegg",
     "type": "Sport",
     "pricePerDay": 99,
-    "fuelCapacity": 90,
     "capacity": 2,
-    "images": ["car1a.jpg", "car1b.jpg"],
-    "description": "A fast and luxurious sports car."
+    "fuelCapacity": 90,
+    "transmission": "Manual",
+    "images": ["Car1.png"]
   },
   {
     "id": 2,
     "name": "Nissan GT-R",
     "type": "Sport",
-    "pricePerDay": 80,
-    "fuelCapacity": 80,
+    "pricePerDay": 82,
     "capacity": 2,
-    "images": ["car2a.jpg", "car2b.jpg"],
-    "description": "Iconic Japanese sports car."
+    "fuelCapacity": 80,
+    "transmission": "Manual",
+    "images": ["Car2.png"]
   },
   {
     "id": 3,
-    "name": "Toyota Prius",
-    "type": "Hatchback",
-    "pricePerDay": 50,
-    "fuelCapacity": 45,
+    "name": "Rolls-Royce",
+    "type": "Sport",
+    "pricePerDay": 96,
     "capacity": 4,
-    "images": ["car3a.jpg", "car3b.jpg"],
-    "description": "Efficient and eco-friendly hybrid car."
+    "fuelCapacity": 70,
+    "transmission": "Manual",
+    "images": ["Car3.png"]
   },
   {
     "id": 4,
-    "name": "Honda Odyssey",
-    "type": "MPV",
-    "pricePerDay": 65,
-    "fuelCapacity": 75,
+    "name": "All New Rush",
+    "type": "SUV",
+    "pricePerDay": 76,
     "capacity": 6,
-    "images": ["car4a.jpg", "car4b.jpg"],
-    "description": "Spacious family minivan with modern amenities."
+    "fuelCapacity": 70,
+    "transmission": "Automatic",
+    "images": ["Car4.png"]
   },
   {
     "id": 5,
-    "name": "Ford Mustang",
-    "type": "Coupe",
-    "pricePerDay": 75,
-    "fuelCapacity": 60,
-    "capacity": 2,
-    "images": ["car5a.jpg", "car5b.jpg"],
-    "description": "American muscle car with a powerful engine."
+    "name": "CR-V",
+    "type": "SUV",
+    "pricePerDay": 80,
+    "capacity": 6,
+    "fuelCapacity": 80,
+    "transmission": "Manual",
+    "images": ["Car5.png"]
   },
   {
     "id": 6,
-    "name": "Tesla Model 3",
-    "type": "Sedan",
-    "pricePerDay": 85,
-    "fuelCapacity": 50,
-    "capacity": 4,
-    "images": ["car6a.jpg", "car6b.jpg"],
-    "description": "Innovative electric sedan with autopilot features."
+    "name": "All New Terios",
+    "type": "SUV",
+    "pricePerDay": 74,
+    "capacity": 6,
+    "fuelCapacity": 90,
+    "transmission": "Automatic",
+    "images": ["Car6.png"]
   },
   {
     "id": 7,
-    "name": "Jeep Wrangler",
-    "type": "SUV",
-    "pricePerDay": 90,
-    "fuelCapacity": 85,
+    "name": "MGZX Exclusive",
+    "type": "Hatchback",
+    "pricePerDay": 76,
     "capacity": 4,
-    "images": ["car7a.jpg", "car7b.jpg"],
-    "description": "Rugged SUV for off-road adventures."
+    "fuelCapacity": 70,
+    "transmission": "Electric",
+    "images": ["Car7.png"]
   },
   {
     "id": 8,
-    "name": "Volkswagen Golf",
-    "type": "Hatchback",
-    "pricePerDay": 55,
-    "fuelCapacity": 50,
+    "name": "New MGZS",
+    "type": "SUV",
+    "pricePerDay": 80,
     "capacity": 4,
-    "images": ["car8a.jpg", "car8b.jpg"],
-    "description": "Compact car with great handling and performance."
+    "fuelCapacity": 80,
+    "transmission": "Manual",
+    "images": ["Car8.png"]
   },
   {
     "id": 9,
-    "name": "Mercedes-Benz E-Class",
-    "type": "Sedan",
-    "pricePerDay": 110,
-    "fuelCapacity": 70,
+    "name": "MGZX Excite",
+    "type": "Hatchback",
+    "pricePerDay": 74,
     "capacity": 4,
-    "images": ["car9a.jpg", "car9b.jpg"],
-    "description": "Luxury sedan with premium features and comfort."
+    "fuelCapacity": 90,
+    "transmission": "Electric",
+    "images": ["Car9.png"]
   },
   {
     "id": 10,
-    "name": "Chevrolet Suburban",
-    "type": "SUV",
-    "pricePerDay": 120,
-    "fuelCapacity": 100,
-    "capacity": 6,
-    "images": ["car10a.jpg", "car10b.jpg"],
-    "description": "Full-size SUV with ample space and towing capability."
+    "name": "Koenigsegg",
+    "type": "Sport",
+    "pricePerDay": 99,
+    "capacity": 2,
+    "fuelCapacity": 90,
+    "transmission": "Manual",
+    "images": ["Car1.png"]
   },
   {
     "id": 11,
-    "name": "Mazda MX-5",
-    "type": "Coupe",
-    "pricePerDay": 70,
-    "fuelCapacity": 50,
+    "name": "Nissan GT-R",
+    "type": "Sport",
+    "pricePerDay": 82,
     "capacity": 2,
-    "images": ["car11a.jpg", "car11b.jpg"],
-    "description": "Lightweight roadster with a sporty feel."
+    "fuelCapacity": 80,
+    "transmission": "Manual",
+    "images": ["Car2.png"]
   },
   {
     "id": 12,
-    "name": "Hyundai Santa Fe",
-    "type": "MPV",
-    "pricePerDay": 68,
-    "fuelCapacity": 65,
-    "capacity": 6,
-    "images": ["car12a.jpg", "car12b.jpg"],
-    "description": "Versatile SUV with modern safety features."
+    "name": "Rolls-Royce",
+    "type": "Sport",
+    "pricePerDay": 96,
+    "capacity": 4,
+    "fuelCapacity": 70,
+    "transmission": "Manual",
+    "images": ["Car3.png"]
   }
 ]

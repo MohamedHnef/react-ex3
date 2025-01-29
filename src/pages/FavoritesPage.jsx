@@ -1,15 +1,19 @@
 // src/pages/FavoritesPage.jsx
 import React from 'react';
 import CarCard from '../components/CarCard';
+import '../styles/HomePage.css'; // Add this import
 
 function FavoritesPage({ cars, favorites, toggleFavorite }) {
   const favoriteCars = cars.filter((car) => favorites.includes(car.id));
 
   return (
-    <div>
-      <h2>Favorites</h2>
+    <div className="home-container">
+      <header className="catalog-header">
+        <h1>Favorites</h1>
+        <p>{favoriteCars.length} Cars</p>
+      </header>
       {favoriteCars.length === 0 ? (
-        <p>No favorites yet.</p>
+        <p className="no-favorites">No favorites yet.</p>
       ) : (
         <div className="car-grid">
           {favoriteCars.map((car) => (

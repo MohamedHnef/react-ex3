@@ -1,32 +1,45 @@
 /* Home Page */
 .home-container {
-    flex: 1;
-    padding: 32px;
-    box-sizing: border-box;
-  }
-  
-  .catalog-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 32px;
-  }
-  
-  .catalog-header h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1d1d1d;
-  }
-  
-  .catalog-header p {
-    font-size: 1rem;
-    color: #596780;
-    margin-left: 15px;
-    padding-top: 5px;
-  }
-  
-  .car-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 32px;
-  }
-  
+  flex: 1;
+  padding: 32px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px !important; /* Force consistent gap */
+  width: 100%;
+}
+
+/* Add this new style */
+.no-favorites {
+  color: #596780;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.title{
+  margin: 0;
+}
+
+.catalog-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.catalog-header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1d1d1d;
+}
+
+.catalog-header p {
+  font-size: 1rem;
+  color: #596780;
+  margin-left: 15px;
+  padding-top: 5px;
+}

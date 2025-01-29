@@ -28,7 +28,7 @@ function HomePage({ cars, favorites, toggleFavorite, filters }) {
   return (
     <div className="home-container">
       <header className="catalog-header">
-        <h1>Cars Catalogue</h1>
+        <h1 className="title">Cars Catalogue</h1>
         <p>{filteredCars.length} Cars</p>
       </header>
       <div className="car-grid">
