@@ -1,5 +1,4 @@
-// src/components/Filters.jsx
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 
 function Filters({
   carsData,
@@ -10,24 +9,29 @@ function Filters({
   maxPrice,
   setMaxPrice,
 }) {
-  // Calculate the counts for each filter dynamically
-  const typeCounts = useMemo(() => {
-    const counts = {};
-    carsData.forEach((car) => {
-      counts[car.type] = (counts[car.type] || 0) + 1;
-    });
-    return counts;
-  }, [carsData]);
+  // Calculate the min and max prices dynamically
+  const minPrice = useMemo(
+    () => Math.min(...carsData.map((car) => car.pricePerDay)),
+    [carsData]
+  );
+  const dynamicMaxPrice = useMemo(
+    () => Math.max(...carsData.map((car) => car.pricePerDay)),
+    [carsData]
+  );
 
-  const capacityCounts = useMemo(() => {
-    const counts = {};
-    carsData.forEach((car) => {
-      counts[car.capacity] = (counts[car.capacity] || 0) + 1;
-    });
-    return counts;
-  }, [carsData]);
+  // Ensure filters are selected by default
+  useEffect(() => {
+    setSelectedTypes(['Sport', 'SUV', 'MPV', 'Sedan', 'Coupe', 'Hatchback']); // All types selected
+    setSelectedCapacity([2, 4, 6]); // All capacities selected
+    setMaxPrice(dynamicMaxPrice); // Set default to max price
+  }, [setSelectedTypes, setSelectedCapacity, setMaxPrice, dynamicMaxPrice]);
 
   const handleTypeChange = (type) => {
+    if (selectedTypes.length === 1 && selectedTypes.includes(type)) {
+      // Prevent deselecting the last type
+      alert('At least one car type must be selected!');
+      return;
+    }
     setSelectedTypes((prev) =>
       prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
     );
@@ -41,6 +45,13 @@ function Filters({
     );
   };
 
+  const handlePriceChange = (e) => {
+    const newPrice = Number(e.target.value);
+    if (newPrice >= minPrice && newPrice <= dynamicMaxPrice) {
+      setMaxPrice(newPrice);
+    }
+  };
+
   return (
     <div>
       <h4>Type</h4>
@@ -52,7 +63,7 @@ function Filters({
               checked={selectedTypes.includes(type)}
               onChange={() => handleTypeChange(type)}
             />
-            {type} ({typeCounts[type] || 0})
+            {type}
           </label>
         ))}
       </div>
@@ -65,7 +76,7 @@ function Filters({
               checked={selectedCapacity.includes(capacity)}
               onChange={() => handleCapacityChange(capacity)}
             />
-            {capacity} Person ({capacityCounts[capacity] || 0})
+            {capacity} Person
           </label>
         ))}
       </div>
@@ -73,12 +84,14 @@ function Filters({
       <div className="price-slider">
         <input
           type="range"
-          min="0"
-          max="100"
+          min={minPrice}
+          max={dynamicMaxPrice}
           value={maxPrice}
-          onChange={(e) => setMaxPrice(Number(e.target.value))}
+          onChange={handlePriceChange}
         />
-        <p>Max: ${maxPrice}</p>
+        <p>
+          Max: ${maxPrice} (Range: ${minPrice} - ${dynamicMaxPrice})
+        </p>
       </div>
     </div>
   );

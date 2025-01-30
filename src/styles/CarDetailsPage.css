@@ -224,6 +224,7 @@ flex-shrink: 0;
     font-weight: 600;
     line-height: 150%;
     letter-spacing: -0.4px;
+    margin: 0;
   }
   .price-sectiondet {
     position: absolute;

@@ -7,8 +7,10 @@
     "capacity": 2,
     "fuelCapacity": 90,
     "transmission": "Manual",
-    "images": ["Car1.png"],
-    "description": "A Swedish high-performance sports car delivering exceptional speed and design."
+    "images": ["images/Car1.png", "images/View2.png", "images/View3.png"],
+    "description": "A Swedish high-performance sports car delivering exceptional speed and design.",
+    "rating": 4.8,
+    "reviews": 120
   },
   {
     "id": 2,
@@ -18,8 +20,10 @@
     "capacity": 2,
     "fuelCapacity": 80,
     "transmission": "Manual",
-    "images": ["Car2.png"],
-    "description": "Japan's iconic performance coupe, known for its twin-turbo power and AWD."
+    "images": ["images/Car2.png", "images/View2.png", "images/View3.png"],
+    "description": "Japan's iconic performance coupe, known for its twin-turbo power and AWD.",
+    "rating": 4.7,
+    "reviews": 95
   },
   {
     "id": 3,
@@ -29,8 +33,10 @@
     "capacity": 4,
     "fuelCapacity": 70,
     "transmission": "Manual",
-    "images": ["Car3.png"],
-    "description": "An ultra-luxury brand featuring unmatched comfort and handcrafted elegance."
+    "images": ["images/Car3.png", "images/View2.png", "images/View3.png"],
+    "description": "An ultra-luxury brand featuring unmatched comfort and handcrafted elegance.",
+    "rating": 3.9,
+    "reviews": 150
   },
   {
     "id": 4,
@@ -40,8 +46,10 @@
     "capacity": 6,
     "fuelCapacity": 70,
     "transmission": "Automatic",
-    "images": ["Car4.png"],
-    "description": "A modern SUV with spacious seating and reliable performance for family trips."
+    "images": ["images/Car4.png", "images/View2.png", "images/View3.png"],
+    "description": "A modern SUV with spacious seating and reliable performance for family trips.",
+    "rating": 4.5,
+    "reviews": 110
   },
   {
     "id": 5,
@@ -51,8 +59,10 @@
     "capacity": 6,
     "fuelCapacity": 80,
     "transmission": "Manual",
-    "images": ["Car5.png"],
-    "description": "A best-selling crossover SUV, loved for its comfortable cabin and robust safety."
+    "images": ["images/Car5.png", "images/View2.png", "images/View3.png"],
+    "description": "A best-selling crossover SUV, loved for its comfortable cabin and robust safety.",
+    "rating": 2.6,
+    "reviews": 130
   },
   {
     "id": 6,
@@ -62,8 +72,10 @@
     "capacity": 6,
     "fuelCapacity": 90,
     "transmission": "Automatic",
-    "images": ["Car6.png"],
-    "description": "Versatile compact SUV offering excellent fuel efficiency and flexible seating."
+    "images": ["images/Car6.png", "images/View2.png", "images/View3.png"],
+    "description": "Versatile compact SUV offering excellent fuel efficiency and flexible seating.",
+    "rating": 4.4,
+    "reviews": 90
   },
   {
     "id": 7,
@@ -73,8 +85,10 @@
     "capacity": 4,
     "fuelCapacity": 70,
     "transmission": "Electric",
-    "images": ["Car7.png"],
-    "description": "A refined electric hatchback that blends style, efficiency, and modern tech."
+    "images": ["images/Car7.png", "images/View2.png", "images/View3.png"],
+    "description": "A refined electric hatchback that blends style, efficiency, and modern tech.",
+    "rating": 4.3,
+    "reviews": 85
   },
   {
     "id": 8,
@@ -84,8 +98,10 @@
     "capacity": 4,
     "fuelCapacity": 80,
     "transmission": "Manual",
-    "images": ["Car8.png"],
-    "description": "A stylish, urban-friendly SUV that offers advanced features and striking design."
+    "images": ["images/Car8.png", "images/View2.png", "images/View3.png"],
+    "description": "A stylish, urban-friendly SUV that offers advanced features and striking design.",
+    "rating": 4.6,
+    "reviews": 105
   },
   {
     "id": 9,
@@ -95,40 +111,9 @@
     "capacity": 4,
     "fuelCapacity": 90,
     "transmission": "Electric",
-    "images": ["Car9.png"],
-    "description": "Sleek electric hatchback delivering both eco-friendly motoring and practicality."
-  },
-  {
-    "id": 10,
-    "name": "Koenigsegg",
-    "type": "Sport",
-    "pricePerDay": 99,
-    "capacity": 2,
-    "fuelCapacity": 90,
-    "transmission": "Manual",
-    "images": ["Car1.png"],
-    "description": "A Swedish high-performance sports car delivering exceptional speed and design."
-  },
-  {
-    "id": 11,
-    "name": "Nissan GT-R",
-    "type": "Sport",
-    "pricePerDay": 82,
-    "capacity": 2,
-    "fuelCapacity": 80,
-    "transmission": "Manual",
-    "images": ["Car2.png"],
-    "description": "Japan's iconic performance coupe, known for its twin-turbo power and AWD."
-  },
-  {
-    "id": 12,
-    "name": "Rolls-Royce",
-    "type": "Sport",
-    "pricePerDay": 96,
-    "capacity": 4,
-    "fuelCapacity": 70,
-    "transmission": "Manual",
-    "images": ["Car3.png"],
-    "description": "An ultra-luxury brand featuring unmatched comfort and handcrafted elegance."
+    "images": ["images/Car9.png", "images/View2.png", "images/View3.png"],
+    "description": "Sleek electric hatchback delivering both eco-friendly motoring and practicality.",
+    "rating": 4.5,
+    "reviews": 75
   }
 ]

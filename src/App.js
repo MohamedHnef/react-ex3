@@ -1,11 +1,21 @@
-// src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import FavoritesPage from './pages/FavoritesPage';
 import CarDetailsPage from './pages/CarDetailsPage';
 import Layout from './components/Layout';
 import carsData from './data/carsData.json';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const [favorites, setFavorites] = useState([]);
@@ -26,6 +36,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Layout
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}

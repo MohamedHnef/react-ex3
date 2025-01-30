@@ -27,12 +27,9 @@ const CarCard = ({ car, isFavorite, toggleFavorite }) => {
       </div>
       <Link to={`/cars/${car.id}`}>
       {/* Car Image */}
-      <img 
-        src={require(`../../public/assets/images/${car.images[0]}`)}
-        alt={car.name} 
-        className="vehicle-image" 
-      />
+      <img src={"assets/" + car.images[0]} alt={car.name} className='vehicle-image'/>
 
+      </Link>
       {/* Specifications Row */}
       <div className="specs-row">
         <div className="spec-itemc fuel">
@@ -74,7 +71,7 @@ const CarCard = ({ car, isFavorite, toggleFavorite }) => {
           Rent Now
         </button>
       </div>
-      </Link>
+      
     </div>
     
   );
