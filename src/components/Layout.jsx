@@ -1,11 +1,19 @@
 // src/components/Layout.jsx
-import React from 'react';
+
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Heart, Search } from 'lucide-react';
 import Filters from './Filters';
 import '../styles/Layout.css';
+import { Link } from 'react-router-dom';
 
-function Layout({ children, filters, carsData }) {
+function Layout({
+  children,
+  filters,
+  carsData,
+ searchQuery,        // <-- ADD THIS
+ setSearchQuery      // <-- AND THIS
+}) {
   const navigate = useNavigate();
   const location = useLocation();
   const isFavoritesPage = location.pathname === '/favorites';
@@ -18,22 +26,31 @@ function Layout({ children, filters, carsData }) {
     }
   };
 
+  // Use setSearchQuery from props
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
   return (
     <div className="layout-container">
       <header className="top-bar">
-        <div className="logo">ShenCarCar</div>
+        <Link to="/" className="logo">ShenCarCar</Link>
+
         <div className="search-container">
           <div className="search-bar-wrapper">
-            <input
-              type="text"
-              placeholder="Search by car name"
-              className="search-bar"
-            />
+          <input
+            type="text"
+            placeholder="Search by car name"
+            className="search-bar"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}  // <-- Ensure state updates
+          />
             <button className="search-icon">
               <Search size={20} color="#596780" />
             </button>
           </div>
         </div>
+
         <button
           className="favorites-icon"
           onClick={handleHeartClick}
@@ -46,11 +63,19 @@ function Layout({ children, filters, carsData }) {
           />
         </button>
       </header>
+
       <div className="main-section">
         <aside className="left-sidebar">
           <Filters {...filters} carsData={carsData} />
         </aside>
-        <main className="content">{children}</main>
+        <main className="content">
+          {
+            // Clone the child if valid, injecting searchQuery
+            React.isValidElement(children)
+              ? React.cloneElement(children, { searchQuery })
+              : children
+          }
+        </main>
       </div>
       <footer className="footer">
         <div className="footer-container">

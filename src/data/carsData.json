@@ -7,7 +7,8 @@
     "capacity": 2,
     "fuelCapacity": 90,
     "transmission": "Manual",
-    "images": ["Car1.png"]
+    "images": ["Car1.png"],
+    "description": "A Swedish high-performance sports car delivering exceptional speed and design."
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "capacity": 2,
     "fuelCapacity": 80,
     "transmission": "Manual",
-    "images": ["Car2.png"]
+    "images": ["Car2.png"],
+    "description": "Japan's iconic performance coupe, known for its twin-turbo power and AWD."
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "capacity": 4,
     "fuelCapacity": 70,
     "transmission": "Manual",
-    "images": ["Car3.png"]
+    "images": ["Car3.png"],
+    "description": "An ultra-luxury brand featuring unmatched comfort and handcrafted elegance."
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "capacity": 6,
     "fuelCapacity": 70,
     "transmission": "Automatic",
-    "images": ["Car4.png"]
+    "images": ["Car4.png"],
+    "description": "A modern SUV with spacious seating and reliable performance for family trips."
   },
   {
     "id": 5,
@@ -47,7 +51,8 @@
     "capacity": 6,
     "fuelCapacity": 80,
     "transmission": "Manual",
-    "images": ["Car5.png"]
+    "images": ["Car5.png"],
+    "description": "A best-selling crossover SUV, loved for its comfortable cabin and robust safety."
   },
   {
     "id": 6,
@@ -57,7 +62,8 @@
     "capacity": 6,
     "fuelCapacity": 90,
     "transmission": "Automatic",
-    "images": ["Car6.png"]
+    "images": ["Car6.png"],
+    "description": "Versatile compact SUV offering excellent fuel efficiency and flexible seating."
   },
   {
     "id": 7,
@@ -67,7 +73,8 @@
     "capacity": 4,
     "fuelCapacity": 70,
     "transmission": "Electric",
-    "images": ["Car7.png"]
+    "images": ["Car7.png"],
+    "description": "A refined electric hatchback that blends style, efficiency, and modern tech."
   },
   {
     "id": 8,
@@ -77,7 +84,8 @@
     "capacity": 4,
     "fuelCapacity": 80,
     "transmission": "Manual",
-    "images": ["Car8.png"]
+    "images": ["Car8.png"],
+    "description": "A stylish, urban-friendly SUV that offers advanced features and striking design."
   },
   {
     "id": 9,
@@ -87,7 +95,8 @@
     "capacity": 4,
     "fuelCapacity": 90,
     "transmission": "Electric",
-    "images": ["Car9.png"]
+    "images": ["Car9.png"],
+    "description": "Sleek electric hatchback delivering both eco-friendly motoring and practicality."
   },
   {
     "id": 10,
@@ -97,7 +106,8 @@
     "capacity": 2,
     "fuelCapacity": 90,
     "transmission": "Manual",
-    "images": ["Car1.png"]
+    "images": ["Car1.png"],
+    "description": "A Swedish high-performance sports car delivering exceptional speed and design."
   },
   {
     "id": 11,
@@ -107,7 +117,8 @@
     "capacity": 2,
     "fuelCapacity": 80,
     "transmission": "Manual",
-    "images": ["Car2.png"]
+    "images": ["Car2.png"],
+    "description": "Japan's iconic performance coupe, known for its twin-turbo power and AWD."
   },
   {
     "id": 12,
@@ -117,6 +128,7 @@
     "capacity": 4,
     "fuelCapacity": 70,
     "transmission": "Manual",
-    "images": ["Car3.png"]
+    "images": ["Car3.png"],
+    "description": "An ultra-luxury brand featuring unmatched comfort and handcrafted elegance."
   }
 ]

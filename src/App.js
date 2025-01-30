@@ -10,7 +10,7 @@ import carsData from './data/carsData.json';
 function App() {
   const [favorites, setFavorites] = useState([]);
   const [filteredCars, setFilteredCars] = useState(carsData);
-
+  const [searchQuery, setSearchQuery] = useState('');
   // Filter-related state
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [selectedCapacity, setSelectedCapacity] = useState([]);
@@ -27,6 +27,8 @@ function App() {
   return (
     <Router>
       <Layout
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
         filters={{
           selectedTypes,
           setSelectedTypes,
@@ -47,6 +49,7 @@ function App() {
                 toggleFavorite={toggleFavorite}
                 setFilteredCars={setFilteredCars}
                 filters={{ selectedTypes, selectedCapacity, maxPrice }}
+                searchQuery={searchQuery}
               />
             }
           />
@@ -61,12 +64,12 @@ function App() {
             }
           />
           <Route
-            path="/car/:carId"
+            path="/cars/:id"
             element={
               <CarDetailsPage
-                cars={carsData}
                 favorites={favorites}
                 toggleFavorite={toggleFavorite}
+                carsData={carsData}
               />
             }
           />
