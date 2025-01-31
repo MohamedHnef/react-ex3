@@ -103,8 +103,8 @@ function Layout({ children, filters, carsData, searchQuery, setSearchQuery }) {
         <div className="footer-bottom">
           <p>©2025 ShenCarCar. All rights reserved</p>
           <div className="footer-links">
-            <a href="javascript:void(0)">Privacy & Policy</a>
-            <a href="javascript:void(0)">Terms & Condition</a>
+            <a href="/">Privacy & Policy</a>
+            <a href="/">Terms & Condition</a>
           </div>
         </div>
       </footer>
