@@ -58,13 +58,6 @@ function Filters({
     );
   };
 
-  const handlePriceChange = (e) => {
-    const newPrice = Number(e.target.value);
-    if (newPrice >= minPrice && newPrice <= dynamicMaxPrice) {
-      setMaxPrice(newPrice);
-    }
-  };
-
   return (
     <div>
       <h4>Type</h4>
