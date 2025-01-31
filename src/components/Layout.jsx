@@ -1,32 +1,23 @@
-// src/components/Layout.jsx
+import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Heart, Search } from "lucide-react";
+import Filters from "./Filters";
+import "../styles/Layout.css";
+import { Link } from "react-router-dom";
 
-import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { Heart, Search } from 'lucide-react';
-import Filters from './Filters';
-import '../styles/Layout.css';
-import { Link } from 'react-router-dom';
-
-function Layout({
-  children,
-  filters,
-  carsData,
- searchQuery,        // <-- ADD THIS
- setSearchQuery      // <-- AND THIS
-}) {
+function Layout({ children, filters, carsData, searchQuery, setSearchQuery }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const isFavoritesPage = location.pathname === '/favorites';
+  const isFavoritesPage = location.pathname === "/favorites";
 
   const handleHeartClick = () => {
     if (isFavoritesPage) {
-      navigate('/');
+      navigate("/");
     } else {
-      navigate('/favorites');
+      navigate("/favorites");
     }
   };
 
-  // Use setSearchQuery from props
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
@@ -34,17 +25,19 @@ function Layout({
   return (
     <div className="layout-container">
       <header className="top-bar">
-        <Link to="/" className="logo">ShenCarCar</Link>
+        <Link to="/" className="logo">
+          ShenCarCar
+        </Link>
 
         <div className="search-container">
           <div className="search-bar-wrapper">
-          <input
-            type="text"
-            placeholder="Search by car name"
-            className="search-bar"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}  // <-- Ensure state updates
-          />
+            <input
+              type="text"
+              placeholder="Search by car name"
+              className="search-bar"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
             <button className="search-icon">
               <Search size={20} color="#596780" />
             </button>
@@ -58,8 +51,8 @@ function Layout({
         >
           <Heart
             size={24}
-            color={isFavoritesPage ? 'red' : '#596780'}
-            fill={isFavoritesPage ? 'red' : 'none'}
+            color={isFavoritesPage ? "red" : "#596780"}
+            fill={isFavoritesPage ? "red" : "none"}
           />
         </button>
       </header>
@@ -69,19 +62,19 @@ function Layout({
           <Filters {...filters} carsData={carsData} />
         </aside>
         <main className="content">
-          {
-            // Clone the child if valid, injecting searchQuery
-            React.isValidElement(children)
-              ? React.cloneElement(children, { searchQuery })
-              : children
-          }
+          {React.isValidElement(children)
+            ? React.cloneElement(children, { searchQuery })
+            : children}
         </main>
       </div>
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-column logo-column">
             <h2 className="footer-logo">ShenCarCar</h2>
-            <p>Our vision is to provide convenience and help increase your sales business.</p>
+            <p>
+              Our vision is to provide convenience and help increase your sales
+              business.
+            </p>
           </div>
           <div className="footer-column">
             <h4>About</h4>

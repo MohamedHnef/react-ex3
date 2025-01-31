@@ -1,7 +1,6 @@
-// src/pages/FavoritesPage.jsx
-import React from 'react';
-import CarCard from '../components/CarCard';
-import '../styles/HomePage.css'; // Add this import
+import React from "react";
+import CarCard from "../components/CarCard";
+import "../styles/HomePage.css";
 
 function FavoritesPage({ cars, favorites, toggleFavorite }) {
   const favoriteCars = cars.filter((car) => favorites.includes(car.id));

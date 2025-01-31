@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect } from 'react';
+import React, { useMemo, useEffect } from "react";
 
 function Filters({
   carsData,
@@ -9,7 +9,6 @@ function Filters({
   maxPrice,
   setMaxPrice,
 }) {
-  // Calculate the min and max prices dynamically
   const minPrice = useMemo(
     () => Math.min(...carsData.map((car) => car.pricePerDay)),
     [carsData]
@@ -19,17 +18,15 @@ function Filters({
     [carsData]
   );
 
-  // Ensure filters are selected by default
   useEffect(() => {
-    setSelectedTypes(['Sport', 'SUV', 'MPV', 'Sedan', 'Coupe', 'Hatchback']); // All types selected
-    setSelectedCapacity([2, 4, 6]); // All capacities selected
-    setMaxPrice(dynamicMaxPrice); // Set default to max price
+    setSelectedTypes(["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"]);
+    setSelectedCapacity([2, 4, 6]);
+    setMaxPrice(dynamicMaxPrice);
   }, [setSelectedTypes, setSelectedCapacity, setMaxPrice, dynamicMaxPrice]);
 
   const handleTypeChange = (type) => {
     if (selectedTypes.length === 1 && selectedTypes.includes(type)) {
-      // Prevent deselecting the last type
-      alert('At least one car type must be selected!');
+      alert("At least one car type must be selected!");
       return;
     }
     setSelectedTypes((prev) =>
@@ -56,7 +53,7 @@ function Filters({
     <div>
       <h4>Type</h4>
       <div className="filter-options">
-        {['Sport', 'SUV', 'MPV', 'Sedan', 'Coupe', 'Hatchback'].map((type) => (
+        {["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"].map((type) => (
           <label key={type}>
             <input
               type="checkbox"

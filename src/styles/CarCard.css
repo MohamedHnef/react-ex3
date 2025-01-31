@@ -1,14 +1,13 @@
 .car-card-container {
   width: 317px;
   height: 388px;
-  background: #FFF;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   box-sizing: border-box;
 }
 
-/* All absolute-positioned children share these properties */
 .card-header,
 .vehicle-image,
 .specs-row,
@@ -17,7 +16,6 @@
   box-sizing: border-box;
 }
 
-/* Card header: title on left, heart icon on right */
 .card-header {
   top: 24px;
   left: 24px;
@@ -28,42 +26,39 @@
 }
 
 .title-group {
-  width: 128px; /* optional */
+  width: 128px;
 }
 
 .car-title {
-  font-family: 'Plus Jakarta Sans';
+  font-family: "Plus Jakarta Sans";
   font-size: 20px;
   font-weight: 700;
-  color: #1A202C;
+  color: #1a202c;
   margin: 0;
   line-height: 24px;
 }
 
 .car-subtitle {
-  font-family: 'Plus Jakarta Sans';
+  font-family: "Plus Jakarta Sans";
   font-size: 14px;
-  color: #90A3BF;
+  color: #90a3bf;
   margin: 4px 0 0;
   line-height: 20px;
 }
 
-/* Car image */
 .vehicle-image {
   top: 124px;
   left: 24px;
-  width: calc(100% - 48px); /* 317 - 24*2 = 269 (or adjust as needed) */
+  width: calc(100% - 48px);
   height: 84px;
   object-fit: contain;
 }
 
-/* Specs row: icons + text */
 .specs-row {
   top: 260px;
   left: 24px;
   right: 24px;
 
-  /* We want them in a single row, side by side */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,10 +68,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Plus Jakarta Sans';
+  font-family: "Plus Jakarta Sans";
   font-size: 14px;
   font-weight: 500;
-  color: #90A3BF;
+  color: #90a3bf;
   line-height: 21px;
   letter-spacing: -0.28px;
 }
@@ -97,26 +92,26 @@
 }
 
 .price-figure {
-  font-family: 'Plus Jakarta Sans';
+  font-family: "Plus Jakarta Sans";
   font-size: 20px;
   font-weight: 700;
-  color: #1A202C;
+  color: #1a202c;
 }
 
 .price-term {
-  font-family: 'Plus Jakarta Sans';
+  font-family: "Plus Jakarta Sans";
   font-size: 14px;
   font-weight: 700;
-  color: #90A3BF;
+  color: #90a3bf;
 }
 
 .rental-button {
-  background: #3563E9;
+  background: #3563e9;
   color: white;
   border: none;
   border-radius: 4px;
   padding: 12px 20px;
-  font-family: 'Plus Jakarta Sans';
+  font-family: "Plus Jakarta Sans";
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -126,7 +121,7 @@
 }
 
 .rental-button:hover {
-  background: #2A4EB2;
+  background: #2a4eb2;
 }
 
 .heart-button {

@@ -1,7 +1,6 @@
-// src/pages/HomePage.jsx
-import React, { useEffect, useState } from 'react';
-import CarCard from '../components/CarCard';
-import '../styles/HomePage.css';
+import React, { useEffect, useState } from "react";
+import CarCard from "../components/CarCard";
+import "../styles/HomePage.css";
 
 function HomePage({ cars, favorites, toggleFavorite, filters, searchQuery }) {
   const { selectedTypes, selectedCapacity, maxPrice } = filters;
@@ -18,7 +17,6 @@ function HomePage({ cars, favorites, toggleFavorite, filters, searchQuery }) {
     }
     updated = updated.filter((c) => c.pricePerDay <= maxPrice);
 
-    // 2) Search filter if >= 2 chars
     if (searchQuery && searchQuery.length >= 2) {
       updated = updated.filter((c) =>
         c.name.toLowerCase().includes(searchQuery.toLowerCase())
