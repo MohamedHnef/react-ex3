@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import carsData from "../data/carsData.json";
 import "../styles/CarDetailsPage.css";
 import { Heart } from "lucide-react";
 

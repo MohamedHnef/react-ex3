@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Heart, Search } from "lucide-react";
 import Filters from "./Filters";
@@ -16,10 +15,6 @@ function Layout({ children, filters, carsData, searchQuery, setSearchQuery }) {
     } else {
       navigate("/favorites");
     }
-  };
-
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
   };
 
   return (
@@ -107,8 +102,8 @@ function Layout({ children, filters, carsData, searchQuery, setSearchQuery }) {
         <div className="footer-bottom">
           <p>©2025 ShenCarCar. All rights reserved</p>
           <div className="footer-links">
-            <a href="#">Privacy & Policy</a>
-            <a href="#">Terms & Condition</a>
+            <a>Privacy & Policy</a>
+            <a>Terms & Condition</a>
           </div>
         </div>
       </footer>
