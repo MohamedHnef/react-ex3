@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect } from "react";
+import React, { useMemo, useEffect } from 'react';
 
 function Filters({
   carsData,
@@ -9,6 +9,7 @@ function Filters({
   maxPrice,
   setMaxPrice,
 }) {
+  // Calculate the min and max prices dynamically
   const minPrice = useMemo(
     () => Math.min(...carsData.map((car) => car.pricePerDay)),
     [carsData]
@@ -17,6 +18,38 @@ function Filters({
     () => Math.max(...carsData.map((car) => car.pricePerDay)),
     [carsData]
   );
+
+  // Ensure filters are selected by default
+  useEffect(() => {
+    setSelectedTypes(['Sport', 'SUV', 'MPV', 'Sedan', 'Coupe', 'Hatchback']); // All types selected
+    setSelectedCapacity([2, 4, 6]); // All capacities selected
+    setMaxPrice(dynamicMaxPrice); // Set default to max price
+  }, [setSelectedTypes, setSelectedCapacity, setMaxPrice, dynamicMaxPrice]);
+
+  const handleTypeChange = (type) => {
+    if (selectedTypes.length === 1 && selectedTypes.includes(type)) {
+      alert('At least one car type must be selected!');
+      return;
+    }
+    setSelectedTypes((prev) =>
+      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
+    );
+  };
+
+  const handleCapacityChange = (capacity) => {
+    setSelectedCapacity((prev) =>
+      prev.includes(capacity)
+        ? prev.filter((c) => c !== capacity)
+        : [...prev, capacity]
+    );
+  };
+
+  const handlePriceChange = (e) => {
+    const newPrice = Number(e.target.value);
+    if (newPrice >= minPrice && newPrice <= dynamicMaxPrice) {
+      setMaxPrice(newPrice);
+    }
+  };
 
   const typeCounts = useMemo(() => {
     const counts = {};
@@ -33,30 +66,6 @@ function Filters({
     });
     return counts;
   }, [carsData]);
-
-  useEffect(() => {
-    setSelectedTypes(["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"]);
-    setSelectedCapacity([2, 4, 6]);
-    setMaxPrice(dynamicMaxPrice);
-  }, [setSelectedTypes, setSelectedCapacity, setMaxPrice, dynamicMaxPrice]);
-
-  const handleTypeChange = (type) => {
-    if (selectedTypes.length === 1 && selectedTypes.includes(type)) {
-      alert("At least one car type must be selected!");
-      return;
-    }
-    setSelectedTypes((prev) =>
-      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
-    );
-  };
-
-  const handleCapacityChange = (capacity) => {
-    setSelectedCapacity((prev) =>
-      prev.includes(capacity)
-        ? prev.filter((c) => c !== capacity)
-        : [...prev, capacity]
-    );
-  };
 
   return (
     <div>
@@ -90,16 +99,17 @@ function Filters({
       <div className="price-slider">
         <input
           type="range"
-          min="0"
-          max="100"
+          min={minPrice}
+          max={dynamicMaxPrice}
           value={maxPrice}
-          onChange={(e) => setMaxPrice(Number(e.target.value))}
+          onChange={handlePriceChange}
         />
-        <p>Max: ${maxPrice}</p>
+        <p>
+          Max: ${maxPrice} (Range: ${minPrice} - ${dynamicMaxPrice})
+        </p>
       </div>
     </div>
   );
 }
-
 
 export default Filters;
