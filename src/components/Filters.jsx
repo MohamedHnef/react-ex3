@@ -18,6 +18,22 @@ function Filters({
     [carsData]
   );
 
+  const typeCounts = useMemo(() => {
+    const counts = {};
+    carsData.forEach((car) => {
+      counts[car.type] = (counts[car.type] || 0) + 1;
+    });
+    return counts;
+  }, [carsData]);
+
+  const capacityCounts = useMemo(() => {
+    const counts = {};
+    carsData.forEach((car) => {
+      counts[car.capacity] = (counts[car.capacity] || 0) + 1;
+    });
+    return counts;
+  }, [carsData]);
+
   useEffect(() => {
     setSelectedTypes(["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"]);
     setSelectedCapacity([2, 4, 6]);
@@ -53,14 +69,14 @@ function Filters({
     <div>
       <h4>Type</h4>
       <div className="filter-options">
-        {["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"].map((type) => (
+        {['Sport', 'SUV', 'MPV', 'Sedan', 'Coupe', 'Hatchback'].map((type) => (
           <label key={type}>
             <input
               type="checkbox"
               checked={selectedTypes.includes(type)}
               onChange={() => handleTypeChange(type)}
             />
-            {type}
+            {type} ({typeCounts[type] || 0})
           </label>
         ))}
       </div>
@@ -73,7 +89,7 @@ function Filters({
               checked={selectedCapacity.includes(capacity)}
               onChange={() => handleCapacityChange(capacity)}
             />
-            {capacity} Person
+            {capacity} Person ({capacityCounts[capacity] || 0})
           </label>
         ))}
       </div>
@@ -81,17 +97,16 @@ function Filters({
       <div className="price-slider">
         <input
           type="range"
-          min={minPrice}
-          max={dynamicMaxPrice}
+          min="0"
+          max="100"
           value={maxPrice}
-          onChange={handlePriceChange}
+          onChange={(e) => setMaxPrice(Number(e.target.value))}
         />
-        <p>
-          Max: ${maxPrice} (Range: ${minPrice} - ${dynamicMaxPrice})
-        </p>
+        <p>Max: ${maxPrice}</p>
       </div>
     </div>
   );
 }
+
 
 export default Filters;
