@@ -285,7 +285,7 @@ body {
   letter-spacing: -0.32px;
 }
 
-.footer-links a {
+.footer-links .link-button {
   margin-left: 2rem;
   color: var(--Secondary-500, #1A202C);
   text-align: right;
@@ -329,3 +329,10 @@ body {
   }
 }
 
+.link-button {
+  all: unset;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit; 
+}
