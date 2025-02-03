@@ -27,8 +27,7 @@ function Filters({
   }, [setSelectedTypes, setSelectedCapacity, setMaxPrice, dynamicMaxPrice]);
 
   const handleTypeChange = (type) => {
-    if (selectedTypes.length === 1 && selectedTypes.includes(type)) {
-      alert('At least one car type must be selected!');
+    if (selectedTypes.length === 1 && selectedTypes.includes(type)) {  
       return;
     }
     setSelectedTypes((prev) =>

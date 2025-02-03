@@ -64,50 +64,51 @@ function Layout({ children, filters, carsData, searchQuery, setSearchQuery }) {
         </main>
       </div>
       <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-column logo-column">
-            <h2 className="footer-logo">ShenCarCar</h2>
-            <p>
-              Our vision is to provide convenience and help increase your sales
-              business.
-            </p>
-          </div>
-          <div className="footer-column">
-            <h4>About</h4>
-            <ul>
-              <li>How it works</li>
-              <li>Featured</li>
-              <li>Partnership</li>
-              <li>Business Relation</li>
-            </ul>
-          </div>
-          <div className="footer-column">
-            <h4>Community</h4>
-            <ul>
-              <li>Events</li>
-              <li>Blog</li>
-              <li>Podcast</li>
-              <li>Invite a friend</li>
-            </ul>
-          </div>
-          <div className="footer-column">
-            <h4>Socials</h4>
-            <ul>
-              <li>Discord</li>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Facebook</li>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>©2025 ShenCarCar. All rights reserved</p>
-          <div className="footer-links">
-            <a href="/">Privacy & Policy</a>
-            <a href="/">Terms & Condition</a>
-          </div>
-        </div>
-      </footer>
+  <div className="footer-container">
+    <div className="footer-column logo-column">
+      <h2 className="footer-logo">ShenCarCar</h2>
+      <p>
+        Our vision is to provide convenience and help increase your sales
+        business.
+      </p>
+    </div>
+    <div className="footer-column">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">Featured</a></li>
+        <li><a href="#">Partnership</a></li>
+        <li><a href="#">Business Relation</a></li>
+      </ul>
+    </div>
+    <div className="footer-column">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Podcast</a></li>
+        <li><a href="#">Invite a friend</a></li>
+      </ul>
+    </div>
+    <div className="footer-column">
+      <h4>Socials</h4>
+      <ul>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div className="footer-bottom">
+    <p>©2025 ShenCarCar. All rights reserved</p>
+    <div className="footer-links">
+      <a href="#">Privacy & Policy</a>
+      <a href="#">Terms & Condition</a>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
